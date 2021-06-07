@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'pbrt-v3-rs'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=pbrt-v3-rs",
+                    "--package=pbrt-v3-rs"
+                ],
+                "filter": {
+                    "name": "pbrt-v3-rs",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'pbrt-v3-rs'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=pbrt-v3-rs",
+                    "--package=pbrt-v3-rs"
+                ],
+                "filter": {
+                    "name": "pbrt-v3-rs",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
